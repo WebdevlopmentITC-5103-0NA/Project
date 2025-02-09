@@ -1,0 +1,28 @@
+nav{
+    background-color:darkgray;
+    padding: 20px
+}
+ul{
+    list-style-type:none;
+    overflow:hidden;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+li{
+    padding: 10px;    
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+a:hover{
+    color: red;
+}
+body{
+    font-family: Arial, sans-serif;
+}
+button:hover{
+    background-color: #3e8e41;
+}
