@@ -2,9 +2,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Login</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="login.css">
 </head>
 <body>
-    login
+    <header>
+        <nav>
+            
+            <img style="float:left;" src="https://assets.pharmeasy.in/apothecary/images/logo_big.svg?dim=256x0"
+                alt="App logo">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="login-container">
+            <h2>Login</h2>
+            <form action="index.html" method="post">
+                <div class="form-group">
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <div class="form-group">
+                    <button type="submit">Login</button>
+                </div>
+                <div class="form-group">
+                    <p >Don't have an account? <a style="color:mediumblue;" href="register.html">Register</a></p>
+                <div class="error-message">
+                    <!-- Error messages will appear here -->
+                </div>
+    </main>
+    <footer>
+        <p>&copy; 2025 Online Medical Store. All Rights Reserved.</p>
+    </footer>
 </body>
 </html>
