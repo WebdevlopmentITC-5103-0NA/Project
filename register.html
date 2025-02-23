@@ -1,15 +1,16 @@
-<html lang="en">
+<html lang="en" style="background-color: white;">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register</title>
     <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="registation.css">
 </head>
 <body>
     <header>
         <nav>
-            <img style="float:left;" src="https://assets.pharmeasy.in/apothecary/images/logo_big.svg?dim=256x0"
-                alt="App logo">
+            <a href="index.html" ><img style="float:left;" src="https://assets.pharmeasy.in/apothecary/images/logo_big.svg?dim=256x0"
+                alt="App logo"></a>
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
@@ -19,7 +20,52 @@
             </div>
         </nav>
     </header>
-    <main></main>
+    <main>
+        <div class="register-container">
+            <h1>Register for Medical Services</h1>
+           
+        <form action="index.html" method="get">
+            <div class="form-group">
+                <label for="full-name">Full Name:</label>
+                <input type="text" id="full-name" name="fullName" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <div class="form-group">
+                <label for="confirm-password">Confirm Password:</label>
+                <input type="password" id="confirm-password" name="confirmPassword" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" required>
+            </div>
+            <div class="form-group">
+                <label for="dob">Date of Birth:</label>
+                <input type="date" id="dob" name="dob" required>
+            </div>
+            <div class="form-group">
+                <label for="gender">Gender:</label>
+                <select id="gender" name="gender" required>
+                    <option value="">Select...</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="address">Address:</label>
+                <textarea id="address" name="address" rows="4" required></textarea>
+            </div>
+            <input type="submit" value="Register">
+        </form>
+        </div>
+    </main>
     <footer>
         <p>&copy; 2025 Online Medical Store. All Rights Reserved.</p>
     </footer>
