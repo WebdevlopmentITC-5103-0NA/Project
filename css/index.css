@@ -136,4 +136,82 @@ button:hover{
     margin-top: auto;
     width: 100%;
   }
+
+  .navbar-toggle {
+    display: none;
+    cursor: pointer;
+    justify-content: end;
+}
+
+.navbar-menu {
+    display: flex;
+}
+
+/* Button Hover */
+button:hover {
+    background-color: #3e8e41;
+}
+@media (min-width: 768px){
+    .navbar-toggle {
+        display: none;
+    }
+    
+    nav ul {
+        display: flex !important;
+    }
   
+}
+  @media (max-width: 768px) {
+    .login-container {
+        width: 90%;
+    }
+
+    nav ul {
+      flex-direction: column;
+      display: none;
+      width: 100%;
+  }
+
+  nav  {
+      display: block;
+  }
+  .navbar-toggle {
+      display: flex;
+      justify-content: flex-end;
+      padding: 10px;
+  }
+
+  nav ul li {
+      width: 100%;
+      text-align: center;
+  }
+
+  .navbar-menu {
+      flex-direction: column;
+  }
+
+  nav ul li {
+      margin-bottom: 10px;
+  }
+
+  nav ul li:last-child {
+      margin-bottom: 0;
+  }
+
+}
+
+@media (max-width: 480px) {
+    .login-container {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .form-group input {
+        padding: 8px;
+    }
+
+    button {
+        padding: 8px;
+        font-size: 14px;
+    }
+}
