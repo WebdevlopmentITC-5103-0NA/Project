@@ -5,21 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PharmEasy</title>
     <link rel="stylesheet" href="css/index.css">
+    <link rel="icon" href="https://assets.pharmeasy.in/apothecary/images/favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <script src="script.js"></script>
 </head>
 
 <body>
     <header>
         <nav>
-            <a href="index.html" ><img style="float:left;" src="https://assets.pharmeasy.in/apothecary/images/logo_big.svg?dim=256x0"
-                alt="App logo"></a>
-            <div class="navbar-toggle" onclick="toggleMenu()" >☰</div>
-           
+            <a href="index.html"><img style="float:left;"
+                    src="https://assets.pharmeasy.in/apothecary/images/logo_big.svg?dim=256x0" alt="App logo"></a>
+            <div class="navbar-toggle" onclick="toggleMenu()">☰</div>
+
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="services.html">Services</a></li>
                 <li><a href="contact.html">Contact</a></li>
+                <li>
+                    <a href="#">
+                        <p style="color:rgb(0, 255, 26);"><i class="fas fa-mobile-alt"></i>
+                            Download App</p>
+                    </a>
+                </li>
             </ul>
             </div>
         </nav>
@@ -29,8 +38,14 @@
 
         <div style="display: flex; justify-content: flex-end;">
 
-            <input style="border: 2px solid black; margin: 5px 20px 0px 30px; padding:10px; width: 75%;" type="text"
-                placeholder="   Search for medicines, health products and more">
+
+            <div style="display: flex; justify-content: flex-end; position: relative; width: 35%;">
+                <i class="fa-solid fa-magnifying-glass"
+                    style="position: absolute; left: 10px; top: 50%; transform: translateY(-50%); color: gray;"></i>
+                <input style="border: 2px solid black; margin: 5px; padding: 10px 10px 10px 30px; width: 100%;"
+                    type="text" placeholder="Search for medicines, health products and more">
+            </div>
+
             <button
                 style="background-color: #4CAF50; color: white;  border-radius: 10px; border: none; padding: 10px 20px; margin: 5px 25px 5px 5px; cursor: pointer;"
                 onmouseover="this.style.backgroundColor='#3e8e41';"
@@ -42,9 +57,11 @@
         </div>
         <div style="display: flex; justify-content: space-around; flex-wrap: wrap;">
             <div>
-                <a href="medical.html">  <img src="https://assets.pharmeasy.in/apothecary/images/medicine_ff.webp?dim=256x0">
-                <h4>Medicine</h4>
-                <p>UPTO 50% OFF</p></a>
+                <a href="medical.html"> <img
+                        src="https://assets.pharmeasy.in/apothecary/images/medicine_ff.webp?dim=256x0">
+                    <h4>Medicine</h4>
+                    <p>UPTO 50% OFF</p>
+                </a>
             </div>
 
             <div>
