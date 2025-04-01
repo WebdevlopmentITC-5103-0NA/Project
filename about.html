@@ -1,39 +1,122 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About</title>
-    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="./css/about.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <title>Online Medical Store</title>
     <link rel="icon" href="https://assets.pharmeasy.in/apothecary/images/favicon.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-
-    <script src="script.js"></script>
+    
+    
 </head>
 <body>
     <header>
         <nav>
-            <a href="index.html" ><img style="float:left;" src="https://assets.pharmeasy.in/apothecary/images/logo_big.svg?dim=256x0"
-                alt="App logo"></a>
-            <div class="navbar-toggle" onclick="toggleMenu()" >☰</div>
-           
+            <a href="index.html"><img style="float:left;"
+                    src="https://assets.pharmeasy.in/apothecary/images/logo_big.svg?dim=256x0" alt="App logo"></a>
+            <div class="navbar-toggle" onclick="toggleMenu()">☰</div>
+
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
-                <li><a href="services.html">Services</a></li>
+                <!-- <li><a href="services.html">Services</a></li> -->
                 <li><a href="contact.html">Contact</a></li>
+                <li><a href="cart.html">Cart</a></li>
                 <li>
                     <a href="#">
                         <p style="color:rgb(0, 255, 26);"><i class="fas fa-mobile-alt"></i>
-                                Download App</p>
-                    </a></li>
+                            Download App</p>
+                    </a>
+                </li>
             </ul>
             </div>
         </nav>
     </header>
-    <main></main>
+
+    <h1>Welcome to Our Online Medical Store</h1>
+
+    <!-- Carousel Section -->
+    <div class="carousel">
+        <div class="carousel-track">
+            <img src="./Images/1666837117031.png" alt="Medicine 1">
+            <img src="./Images/labmedicine.jpg" alt="Medicine 2">
+            <img src="./Images/personalcaree.jpg" alt="Medicine 3">
+            <img src="./Images/medicinee.jpg" alt="Medicine 4">
+            <img src="./Images/image.jpg" alt="Medicine 5">
+        </div>
+
+        <!-- Navigation Arrows -->
+        <div class="carousel-buttons">
+            <button onclick="prevSlide()">❮</button>
+            <button onclick="nextSlide()">❯</button>
+        </div>
+    </div>
+
+    <!-- Dots for Slide Indication -->
+    <div class="dots">
+        <span class="dot" onclick="setSlide(0)"></span>
+        <span class="dot" onclick="setSlide(1)"></span>
+        <span class="dot" onclick="setSlide(2)"></span>
+        <span class="dot" onclick="setSlide(3)"></span>
+        <span class="dot" onclick="setSlide(4)"></span>
+    </div>
+
+    <!-- About Page Section -->
+    <div class="about-container">
+        <h2>About Our Medical Store</h2>
+        <img src="./Images/prescription.jpg" alt="Medical Store Image">
+        <p>Welcome to our online medical store! We provide high-quality medicines and healthcare products at affordable prices. 
+        Our mission is to make healthcare accessible and convenient for everyone.</p>
+        <p>We offer a wide range of prescription and over-the-counter medicines, ensuring you get the best care.</p>
+        <img src="./Images/storeimage.jpg" alt="Pharmacy Shelves">
+        <p>Our store is stocked with a variety of healthcare essentials, from vitamins to personal care items. 
+        We ensure that all our products are sourced from trusted manufacturers.</p>
+        <img src="./Images/personalcare.jpg" alt="Online Ordering">
+        <p>With our user-friendly online ordering system, you can browse and purchase medicines from the comfort of your home. 
+        Fast delivery ensures you get your products on time.</p>
+    </div>
     <footer>
         <p>&copy; 2025 Online Medical Store. All Rights Reserved.</p>
     </footer>
+    <script>
+        let currentIndex = 0;
+        const track = document.querySelector('.carousel-track');
+        const slides = document.querySelectorAll('.carousel img');
+        const dots = document.querySelectorAll('.dot');
+        const totalSlides = slides.length;
+
+        function updateSlidePosition() {
+            track.style.transform = `translateX(-${currentIndex * 100}%)`;
+            dots.forEach(dot => dot.classList.remove("active"));
+            dots[currentIndex].classList.add("active");
+        }
+
+        function nextSlide() {
+            currentIndex = (currentIndex + 1) % totalSlides;
+            updateSlidePosition();
+        }
+
+        function prevSlide() {
+            currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+            updateSlidePosition();
+        }
+
+        function setSlide(index) {
+            currentIndex = index;
+            updateSlidePosition();
+        }
+
+        function autoSlide() {
+            nextSlide();
+        }
+
+        // Initialize
+        updateSlidePosition();
+        setInterval(autoSlide, 3000); // Auto-slide every 4 seconds
+    </script>
+
 </body>
 </html>
