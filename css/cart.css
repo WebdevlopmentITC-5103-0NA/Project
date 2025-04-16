@@ -19,6 +19,15 @@ h2 {
   color: rgb(238, 67, 96);
   font-style: italic;
 }
+#payNow{
+  padding:15px;
+  background-color: #333;
+  color:#FFFFFF;
+  width:10%;
+  border:none;
+  text-align: center;
+  margin-left:660px;
+}
 
 /* .search-bar {
     display: block;
